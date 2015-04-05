@@ -3,23 +3,9 @@
 <head>
 	<title>Frontend Coding Test</title>
 	<link type="text/css" rel="stylesheet" href="../css/style.css" />
-	<style type="text/css">
-		.picture {
-			background-color: #F9F9F9;
-			border: 1px solid #CCCCCC; padding: 3px;
-			text-align: center;
-			margin: 0 0 18px 0;
-			width: 647px;
-			color: #000;
-		}
-		
-		.picture img {
-			border: 1px solid #CCCCCC;
-			vertical-align:middle; margin-bottom: 3px;
-		}
-	</style>
+	<link type="text/css" rel="stylesheet" href="../css/tabbed_content.css" />
 </head>
-<body>	
+<body>
 	<div id="headwrap">
 		<div class="head">
 			<div class="logo">Riot Games</div>
@@ -39,24 +25,37 @@
 
 		<hr/>
 
+		Turn this content into a tabbed container.
 		<div id="container">
-			Turn this content into a tabbed container.
 
-			<h3>Tab 1</h3>
-			<p>
-				Gingerbread muffin gummies gingerbread macaroon. Lollipop candy applicake toffee faworki. Bear claw topping jelly toffee toffee powder tiramisu candy chupa chups. Chupa chups dragee icing applicake chupa chups dessert. Croissant jelly faworki marzipan tootsie roll marshmallow. Marshmallow toffee sweet roll fruitcake.
-			</p>
+			<ul class="tabs">
+				<!--using comments to remove gap between list items, as inline block elements
+				are sensitive to their structure in HTML-->
+				<!-- more info at http://stackoverflow.com/questions/14958606/css-html-horizonal-list-remove-this-mystery-gap-between-list-items-see-pic -->
+				<li class="tab selected" data-tab="tab-1">Tab 1</li><!--
+        --><li class="tab" data-tab="tab-2">Tab 2</li><!--
+        --><li class="tab" data-tab="tab-3">Tab 3</li><!--
+        --></ul>
+				<div class="content selected" data-content="content-1">
+					<p>
+						Gingerbread muffin gummies gingerbread macaroon. Lollipop candy applicake toffee faworki. Bear claw topping jelly toffee toffee powder tiramisu candy chupa chups. Chupa chups dragee icing applicake chupa chups dessert. Croissant jelly faworki marzipan tootsie roll marshmallow. Marshmallow toffee sweet roll fruitcake.
+					</p>
+				</div>
 
-			<h3>Tab 2</h3>
-			<p>
-				Chocolate faworki croissant brownie halvah macaroon gummi bears wypas. Chupa chups icing gummies pudding dessert carrot cake. Cupcake jelly beans sweet roll icing ice cream apple pie tootsie roll gummi bears marzipan. Brownie gummies chupa chups pie. Cupcake jujubes topping. 
-			</p>
+				<div class="content" data-content="content-2">
+					<p>
+						Chocolate faworki croissant brownie halvah macaroon gummi bears wypas. Chupa chups icing gummies pudding dessert carrot cake. Cupcake jelly beans sweet roll icing ice cream apple pie tootsie roll gummi bears marzipan. Brownie gummies chupa chups pie. Cupcake jujubes topping.
+					</p>
+				</div>
 
-			<h3>Tab 3</h3>
-			<p>
-				Cheesecake jelly beans ice cream lollipop sweet pastry. Chupa chups dessert cheesecake sesame snaps. Cookie ice cream candy canes pastry cake muffin. Icing chocolate sweet gummi bears powder oat cake oat cake lemon drops.
-			</p>
+				<div class="content" data-content="content-3">
+					<p>
+						Cheesecake jelly beans ice cream lollipop sweet pastry. Chupa chups dessert cheesecake sesame snaps. Cookie ice cream candy canes pastry cake muffin. Icing chocolate sweet gummi bears powder oat cake oat cake lemon drops.
+					</p>
+				</div>
 		</div>
 	</div>
+
+	<script src="../js/tabbed_content/tabbed_content.js" type="text/javascript"></script>
 </body>
 </html>

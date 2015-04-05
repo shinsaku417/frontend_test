@@ -1,0 +1,60 @@
+body {
+	background: #000 url(../img/bg_final.jpg) no-repeat center top;
+	margin: 0;
+	padding: 0;
+	font-family: Arial,sans-serif;
+	font-size: 15px;
+	color: black;
+}
+
+#container {
+  width: 650px;
+  padding: 10px;
+  background: white;
+}
+
+.tabs {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.tab {
+  border: 1px solid black;
+  padding: 5px;
+  background: white;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tab.selected {
+  background: #FFFFD6;
+}
+
+.content {
+  display: none;
+}
+
+.content.selected {
+  display: inline;
+}
+
+.content p {
+  border: 1px solid black;
+  margin: 0px;
+  padding: 10px;
+}
+
+.picture {
+  background-color: #F9F9F9;
+  border: 1px solid #CCCCCC; padding: 3px;
+  text-align: center;
+  margin: 0 0 18px 0;
+  width: 647px;
+  color: #000;
+}
+
+.picture img {
+  border: 1px solid #CCCCCC;
+  vertical-align:middle; margin-bottom: 3px;
+}
